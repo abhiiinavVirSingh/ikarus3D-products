@@ -1,0 +1,55 @@
+/* src/App.css */
+.App {
+  max-width: 900px;
+  margin: 30px auto; /* Slightly less top margin */
+  padding: 0; /* Remove padding here if nav is inside */
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+  border-radius: 8px;
+  overflow: hidden; /* Prevent content from breaking border-radius */
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #dee2e6; /* Clearer separator */
+  padding: 0 30px; /* Padding left/right */
+  height: 60px; /* Fixed height */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Align links horizontally */
+  gap: 25px; /* Spacing between links */
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #495057; /* Darker gray for links */
+  font-weight: 500;
+  padding: 18px 0; /* Vertical padding to fill height */
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  border-bottom: 3px solid transparent; /* Placeholder for active state */
+}
+
+nav a:hover {
+  color: #007bff; /* Blue on hover */
+  border-bottom-color: #007bff; /* Add underline on hover */
+}
+
+/* Style for active link (Requires NavLink from react-router-dom) */
+nav a.active {
+  color: #0056b3;
+  border-bottom-color: #0056b3;
+}
+
+/* Container for page content below the nav */
+.page-content {
+  padding: 25px 30px; /* Add padding here */
+}

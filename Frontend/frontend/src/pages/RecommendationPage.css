@@ -1,0 +1,136 @@
+/* src/pages/RecommendationPage.css */
+.recommendation-page h1 {
+  text-align: center;
+  color: #343a40; /* Darker heading */
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 10px; /* Space below heading */
+  font-size: 1.75rem; /* Larger heading */
+}
+
+/* Style the introductory paragraph */
+.recommendation-page p:first-of-type {
+  text-align: center;
+  color: #6c757d; /* Lighter text color */
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.chat-history {
+  height: 50vh; /* Use viewport height for better scaling */
+  min-height: 300px; /* Ensure minimum height */
+  max-height: 500px; /* Prevent it from getting too tall */
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 0; /* Remove margin below chat */
+  background-color: #f8f9fa; /* Match nav background */
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add some scrollbar styling (Optional, Webkit browsers like Chrome/Safari) */
+.chat-history::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-history::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.chat-history::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.chat-history::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+
+.message {
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow on messages */
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background-color: #ffffff; /* White background for bot */
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #eee; /* Faint border for bot messages */
+}
+
+/* Input Form adjustments */
+.input-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 0; /* Remove top margin */
+  padding: 15px;
+  border-top: 1px solid #dee2e6; /* Match nav border */
+  background-color: #f8f9fa; /* Match nav background */
+  border-bottom-left-radius: 8px; /* Match App container radius */
+  border-bottom-right-radius: 8px; /* Match App container radius */
+}
+
+.input-form input {
+  flex-grow: 1;
+  padding: 10px 15px; /* Adjust padding if needed */
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 0.95rem; /* Slightly smaller font */
+  background-color: #fff; /* White input background */
+}
+.input-form input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-form button {
+  padding: 10px 20px; /* Adjust padding if needed */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.95rem; /* Match input font */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+.input-form button:hover {
+  background-color: #0056b3;
+}
+
+.input-form button:disabled {
+  background-color: #dbdfe3;
+  cursor: not-allowed;
+}
+
+/* Grid for results inside bot message */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Slightly smaller min width */
+  gap: 15px; /* Reduced gap */
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
